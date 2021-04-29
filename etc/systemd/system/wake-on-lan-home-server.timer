@@ -1,0 +1,10 @@
+[Unit]
+Description=Run wget update for freedns
+
+[Timer]
+OnCalendar=*-*-* 5:30
+Persistent=true
+Unit=wake-on-lan-desktop.service
+
+[Install]
+WantedBy=timers.target

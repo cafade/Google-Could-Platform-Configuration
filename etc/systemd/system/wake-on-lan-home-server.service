@@ -1,0 +1,10 @@
+[Unit]
+Description=Run Wake on Lan to ensure home server uptime
+StartLimitInterval=200
+StartLimitBurst=5
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=30
+ExecStart=wakeonlan -p 10009 -i learnin.webredirect.org d0:27:88:9d:9b:eb
